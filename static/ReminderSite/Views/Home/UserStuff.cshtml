@@ -1,0 +1,38 @@
+﻿
+@model IEnumerable<ReminderSite.Models.UserInfo>
+@{
+    ViewData["title"] = "UserInfo";
+    Layout = null;
+ }
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>UserInfo</title>
+</head>
+<body>
+    <h2>Here is the list of registeers</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>UserName</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var r in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => r.FirstName)</td>
+                    <td>@Html.DisplayFor(modelItem => r.LastName)</td>
+                    <td>@Html.DisplayFor(modelItem => r.UserName)</td>
+                    <td>@Html.DisplayFor(modelItem => r.Email)</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html> 
