@@ -20,6 +20,6 @@ namespace ReminderSite.Models
         [EmailAddress]
         public string Email { get; set; }
         [PasswordPropertyText]
-        public string Password { get; set; }
+        public string Password { get; set; } 
     }
 }

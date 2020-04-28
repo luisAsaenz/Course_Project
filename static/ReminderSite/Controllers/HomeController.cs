@@ -31,30 +31,30 @@ namespace ReminderSite.Controllers
         [HttpPost]
         public IActionResult Register(UserInfo ui)
         {
-            UserInfo[] user = new UserInfo[] { };
-
+            List<UserInfo> dict = new List<UserInfo>();
             string usern = ui.UserName;
-            using (MD5 md5hash = MD5.Create())
+            
+            if (!dict.Exists(x => x.UserName == usern))
             {
-                string hash = Getmd5hash(md5hash, (ui.Password + ui.UserName));
-                ui.Password = hash;
+                ViewBag.message1 = "There is a user with this name please be a little more creative";
+                return View();
             }
-            foreach (var item in user)
+            else
             {
-                if (usern == item.UserName)
-                {
-                    ViewBag.message1 = "There is a user with this name please be a little more creative";
-                }
-                else
-                {
-                   _context.Add(ui);
-                   _context.SaveChanges();
-                }
-            }
 
-            ViewBag.message = ui.FirstName + " has registered.....!";
-            return View();
+                using (MD5 md5hash = MD5.Create())
+                {
+                    string hash = Getmd5hash(md5hash, (ui.Password + ui.UserName));
+                    ui.Password = hash;
+                }
+                _context.Add(ui);
+                _context.SaveChanges();
+                ViewBag.message = ui.FirstName + " has registered.....!";
+                return View();
+            }
+            
         }
+
 
         private string Getmd5hash(MD5 md5hash, string password)
         {
