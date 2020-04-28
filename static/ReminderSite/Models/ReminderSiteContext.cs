@@ -10,6 +10,6 @@ namespace ReminderSite.Models
     {
         public ReminderSiteContext (DbContextOptions<ReminderSiteContext> options) : base(options) { }
         public DbSet<UserInfo> UserInfos { get; set; }
-        public DbSet<UserTask> UserTasks { get; set; }
+        public DbSet<Task> Task { get; set; }
     }
 }

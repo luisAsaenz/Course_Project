@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Security.Policy;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Razor.Language;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.Extensions.Logging;
+using NUnit.Framework;
 using ReminderSite.Models;
 
 namespace ReminderSite.Controllers
@@ -25,12 +31,45 @@ namespace ReminderSite.Controllers
         [HttpPost]
         public IActionResult Register(UserInfo ui)
         {
-            _context.Add(ui);
-            _context.SaveChanges();
-            ViewBag.message = ui.FirstName + "has registered.....!";
+            UserInfo[] user = new UserInfo[] { };
+
+            string usern = ui.UserName;
+            using (MD5 md5hash = MD5.Create())
+            {
+                string hash = Getmd5hash(md5hash, (ui.Password + ui.UserName));
+                ui.Password = hash;
+            }
+            foreach (var item in user)
+            {
+                if (usern == item.UserName)
+                {
+                    ViewBag.message1 = "There is a user with this name please be a little more creative";
+                }
+                else
+                {
+                   _context.Add(ui);
+                   _context.SaveChanges();
+                }
+            }
+
+            ViewBag.message = ui.FirstName + " has registered.....!";
             return View();
         }
-       
+
+        private string Getmd5hash(MD5 md5hash, string password)
+        {
+            byte[] data = md5hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+            StringBuilder sBuilder = new StringBuilder();
+
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            return sBuilder.ToString();
+        }
+
         public IActionResult About()
         {
             return View();

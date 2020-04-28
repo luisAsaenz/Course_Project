@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReminderSite.Models;
 
 namespace ReminderSite.Migrations
 {
     [DbContext(typeof(ReminderSiteContext))]
-    partial class ReminderSiteContextModelSnapshot : ModelSnapshot
+    [Migration("20200427221136_Task")]
+    partial class Task
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
