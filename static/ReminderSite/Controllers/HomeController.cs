@@ -19,8 +19,8 @@ namespace ReminderSite.Controllers
     public class HomeController : Controller
     {
 
-        private readonly ReminderSiteContext _context;
-        public HomeController(ReminderSiteContext context)
+        private readonly Models.ReminderSiteContext _context;
+        public HomeController(Models.ReminderSiteContext context)
         {
             _context = context;
         }
@@ -34,7 +34,8 @@ namespace ReminderSite.Controllers
             List<UserInfo> dict = new List<UserInfo>();
             string usern = ui.UserName;
             
-            if (!dict.Exists(x => x.UserName == usern))
+            
+            if (dict.Exists(x => x.UserName == usern))
             {
                 ViewBag.message1 = "There is a user with this name please be a little more creative";
                 return View();
@@ -74,16 +75,34 @@ namespace ReminderSite.Controllers
         {
             return View();
         }
-        public IActionResult Login(string UserName, string Password)
+        public IActionResult Login()
         {
-            if (!string.IsNullOrEmpty(UserName) && string.IsNullOrEmpty(Password))
+            return View();
+            
+        }
+        [HttpPost]
+        public IActionResult Login(UserInfo ui)
+        {
+            UserInfo[] Users = new UserInfo[] { };
+            IEnumerable<string> user = Users.Select(us => us.UserName);
+            IEnumerable<string> passwords = Users.Select(us => us.Password);
+            Dictionary<string, string> myusers = new Dictionary<string, string>();
+            string[] pass = new string[] { };
+            int j = 0;
+            foreach (string p in passwords)
             {
-                return RedirectToAction("Login");
+                pass[j] = p;
+                j++;
             }
-            if (UserName == "UserName" && Password == "Password")
+            j = 0;
+            foreach (string u in user)
             {
+                myusers.Add(u, pass[j]);
+                j++;
+            }
 
-            }
+            
+            
             return View();
         }
         public async Task<IActionResult> UserStuff()

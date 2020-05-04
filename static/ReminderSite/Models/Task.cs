@@ -19,8 +19,8 @@ namespace ReminderSite.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime TaskDue { get; set; }
-        [ForeignKey("UserID")]
+       [ForeignKey("UserID")]
         public int UserID { get; set; }
-        public UserInfo UserInfo { get; set; }
+        
     }
 }

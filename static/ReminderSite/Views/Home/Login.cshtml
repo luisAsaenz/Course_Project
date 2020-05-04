@@ -1,7 +1,16 @@
-﻿
+﻿@model ReminderSite.Models.UserInfo
 @{
     ViewData["title"] = "Login";
 }
+    <style>
+        h1, h4 {
+            color: white;
+        }
+
+        body {
+            color: white;
+        }
+    </style>
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -11,15 +20,28 @@
     <title></title>
 </head>
 <body>
+    <form asp-action="Login">
+        <center>
+            <h1>LOGIN</h1><br /><br />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div>
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
 
-    <center>
-        <h1>LOGIN</h1><br /><br />
-        <label for="username">Username</label><br />
-        <input type="text" id="username" name="username" required /><br /><br />
-        <label for="password">Password</label> <br />
-        <input type="password" id="password" required /><br /> <br />
-        <input type="submit" value="LOGIN" /><br /><br />
-    </center>
-    
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            @ViewBag.message
+            @ViewBag.message1
+            @ViewBag.message2
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </center>
+    </form>
 </body>
 </html>

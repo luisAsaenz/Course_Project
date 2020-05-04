@@ -5,6 +5,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using ReminderSite.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace ReminderSite
 {
@@ -22,6 +23,7 @@ namespace ReminderSite
         {
             services.AddControllersWithViews();
             services.AddDbContext<ReminderSiteContext>(option => option.UseSqlServer(Configuration["Data:ReminderSiteContext:ConnectionString"]));
+           
 
         }
 

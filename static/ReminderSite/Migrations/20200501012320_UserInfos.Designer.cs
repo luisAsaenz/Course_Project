@@ -10,8 +10,8 @@ using ReminderSite.Models;
 namespace ReminderSite.Migrations
 {
     [DbContext(typeof(ReminderSiteContext))]
-    [Migration("20200427221136_Task")]
-    partial class Task
+    [Migration("20200501012320_UserInfos")]
+    partial class UserInfos
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -54,6 +54,9 @@ namespace ReminderSite.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");

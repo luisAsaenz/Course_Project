@@ -233,6 +233,7 @@ C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\net
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\nunit.framework.dll
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\SQLitePCLRaw.core.dll
@@ -323,6 +324,8 @@ C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\net
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.csprojAssemblyReference.cache
+C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.csproj.CoreCompileInputs.cache
+C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.RazorAssemblyInfo.cache
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.RazorAssemblyInfo.cs
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.AssemblyInfoInputs.cache
@@ -331,7 +334,6 @@ C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\net
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.TagHelpers.output.cache
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.RazorCoreGenerate.cache
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
-C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\UserStuff.cshtml.g.cs
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
@@ -349,6 +351,4 @@ C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\net
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.dll
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.pdb
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.genruntimeconfig.cache
-C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\nunit.framework.dll
-C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.csproj.CoreCompileInputs.cache
-C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
