@@ -8,6 +8,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.AspNetCore.Razor.Language;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.Extensions.Logging;
@@ -31,27 +32,30 @@ namespace ReminderSite.Controllers
         [HttpPost]
         public IActionResult Register(UserInfo ui)
         {
-            List<UserInfo> dict = new List<UserInfo>();
+            
+           
+            IEnumerable<string> users = _context.UserInfos.Select(x => x.UserName);
+            
             string usern = ui.UserName;
-            
-            
-            if (dict.Exists(x => x.UserName == usern))
+            if (users.Contains(usern))
             {
-                ViewBag.message1 = "There is a user with this name please be a little more creative";
+                ViewBag.message1 = "The user with the name of " + ui.UserName + " already exists";
                 return View();
             }
             else
             {
-
+ 
                 using (MD5 md5hash = MD5.Create())
                 {
                     string hash = Getmd5hash(md5hash, (ui.Password + ui.UserName));
                     ui.Password = hash;
                 }
+              
                 _context.Add(ui);
                 _context.SaveChanges();
                 ViewBag.message = ui.FirstName + " has registered.....!";
                 return View();
+
             }
             
         }
@@ -75,6 +79,7 @@ namespace ReminderSite.Controllers
         {
             return View();
         }
+        [HttpGet]
         public IActionResult Login()
         {
             return View();
@@ -83,27 +88,41 @@ namespace ReminderSite.Controllers
         [HttpPost]
         public IActionResult Login(UserInfo ui)
         {
-            UserInfo[] Users = new UserInfo[] { };
-            IEnumerable<string> user = Users.Select(us => us.UserName);
-            IEnumerable<string> passwords = Users.Select(us => us.Password);
-            Dictionary<string, string> myusers = new Dictionary<string, string>();
-            string[] pass = new string[] { };
-            int j = 0;
-            foreach (string p in passwords)
-            {
-                pass[j] = p;
-                j++;
-            }
-            j = 0;
-            foreach (string u in user)
-            {
-                myusers.Add(u, pass[j]);
-                j++;
-            }
+            IEnumerable<string> user = _context.UserInfos.Select(x => x.UserName);
 
+            IEnumerable<string> passwords = _context.UserInfos.Select(us => us.Password);
             
-            
-            return View();
+            Dictionary<string, string> myusers = new Dictionary<string, string>();
+            int j = 0;
+            foreach (string i in user)
+            {
+                myusers.Add(i, passwords.ElementAt(j));
+                j++;
+            }
+            if (user.Contains(ui.UserName))
+            {
+                using (MD5 md5hash = MD5.Create())
+                {
+                    string hash = Getmd5hash(md5hash, (ui.Password + ui.UserName));
+                    ui.Password = hash;
+                }
+                
+                if (myusers[ui.UserName] == ui.Password)
+                {
+                    ViewBag.message = ui.UserName + " has logged in";
+                    return View();
+                }
+                else
+                {
+                    ViewBag.message1 = "The password you provided is incorrect.";
+                    return View();
+                }
+            }
+            else
+            {
+                ViewBag.message2 = "The Username you have provided is either incorrect or input incorrectly, please try again";
+                return View();
+            }
         }
         public async Task<IActionResult> UserStuff()
         {

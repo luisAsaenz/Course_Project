@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ReminderSite.Models
 {
-    public class Task
+    public class UserTask
     {
         [Key]
         [NotNull]

@@ -23,6 +23,7 @@ namespace ReminderSite
         {
             services.AddControllersWithViews();
             services.AddDbContext<ReminderSiteContext>(option => option.UseSqlServer(Configuration["Data:ReminderSiteContext:ConnectionString"]));
+
            
 
         }

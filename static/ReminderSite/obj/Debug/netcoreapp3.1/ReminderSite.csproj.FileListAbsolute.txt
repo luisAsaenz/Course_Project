@@ -323,9 +323,6 @@ C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\net
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.csprojAssemblyReference.cache
-C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.csproj.CoreCompileInputs.cache
-C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.RazorAssemblyInfo.cache
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.RazorAssemblyInfo.cs
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.AssemblyInfoInputs.cache
@@ -339,7 +336,6 @@ C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\net
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout1.cshtml.g.cs
-C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.RazorTargetAssemblyInfo.cache
@@ -352,3 +348,14 @@ C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\net
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.pdb
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.genruntimeconfig.cache
 C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
+C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\ReminderSite.StaticWebAssets.xml
+C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.csproj.CoreCompileInputs.cache
+C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\LuisA\OneDrive\Desktop\Course_Project\static\ReminderSite\obj\Debug\netcoreapp3.1\ReminderSite.csprojAssemblyReference.cache
