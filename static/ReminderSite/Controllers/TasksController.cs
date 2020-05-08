@@ -33,7 +33,7 @@ namespace ReminderSite.Controllers
             }
 
             var task = await _context.Task
-                .FirstOrDefaultAsync(m => m.TaskID == id);
+                .FirstOrDefaultAsync(m => m.TaskId == id);
             if (task == null)
             {
                 return NotFound();
@@ -87,7 +87,7 @@ namespace ReminderSite.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("TaskID,Tasks,TaskDue,UserID")] UserTask task)
         {
-            if (id != task.TaskID)
+            if (id != task.TaskId)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace ReminderSite.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!TaskExists(task.TaskID))
+                    if (!TaskExists(task.TaskId))
                     {
                         return NotFound();
                     }
@@ -124,7 +124,7 @@ namespace ReminderSite.Controllers
             }
 
             var task = await _context.Task
-                .FirstOrDefaultAsync(m => m.TaskID == id);
+                .FirstOrDefaultAsync(m => m.TaskId == id);
             if (task == null)
             {
                 return NotFound();
@@ -146,7 +146,7 @@ namespace ReminderSite.Controllers
 
         private bool TaskExists(int id)
         {
-            return _context.Task.Any(e => e.TaskID == id);
+            return _context.Task.Any(e => e.TaskId == id);
         }
     }
 }

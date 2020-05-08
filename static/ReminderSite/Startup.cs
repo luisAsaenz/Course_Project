@@ -24,7 +24,8 @@ namespace ReminderSite
             services.AddControllersWithViews();
             services.AddDbContext<ReminderSiteContext>(option => option.UseSqlServer(Configuration["Data:ReminderSiteContext:ConnectionString"]));
 
-           
+            services.AddMemoryCache();
+            services.AddSession();
 
         }
 
@@ -45,7 +46,7 @@ namespace ReminderSite
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseSession();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

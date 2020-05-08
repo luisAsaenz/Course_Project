@@ -13,14 +13,17 @@ namespace ReminderSite.Models
     {
         [Key]
         [NotNull]
-        public int TaskID { get; set; }
+        public int TaskId { get; set; }
+        public string TaskTitle { get; set; }
         [MaxLength(300, ErrorMessage = "Task can not be over 300 character")]
         public string Tasks { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime TaskDue { get; set; }
-       [ForeignKey("UserID")]
-        public int UserID { get; set; }
+        
+        [ForeignKey("UserId")]
+        public int UserId { get; set; }
+        public UserInfo UserInfo { get; set; }
         
     }
 }

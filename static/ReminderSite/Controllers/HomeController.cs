@@ -37,7 +37,12 @@ namespace ReminderSite.Controllers
             IEnumerable<string> users = _context.UserInfos.Select(x => x.UserName);
             
             string usern = ui.UserName;
-            if (users.Contains(usern))
+            if(String.IsNullOrEmpty(ui.UserName) || String.IsNullOrEmpty(ui.Password))
+            {
+                ViewBag.message3 = "Please fill in the above boxs";
+                return View();
+            }
+            else if (users.Contains(usern))
             {
                 ViewBag.message1 = "The user with the name of " + ui.UserName + " already exists";
                 return View();
@@ -99,7 +104,12 @@ namespace ReminderSite.Controllers
                 myusers.Add(i, passwords.ElementAt(j));
                 j++;
             }
-            if (user.Contains(ui.UserName))
+            if (String.IsNullOrEmpty(ui.UserName) || String.IsNullOrEmpty(ui.Password))
+            {
+                ViewBag.message3 = "Please fill in the above boxs";
+                return View();
+            }
+            else if (user.Contains(ui.UserName))
             {
                 using (MD5 md5hash = MD5.Create())
                 {

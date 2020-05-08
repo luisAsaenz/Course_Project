@@ -36,7 +36,7 @@
                             <span asp-validation-for="FirstName" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="LastName" class="control-label"></label>
+                            <label asp-for="LastName" class="control-label">Last Name: </label>
                             <input asp-for="LastName" class="form-control" />
                             <span asp-validation-for="LastName" class="text-danger"></span>
                         </div>
@@ -56,6 +56,7 @@
                             <input asp-for="Password" class="form-control" />
                             <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
+                    @ViewBag.message3 
                         <div class="form-group">
                             <input type="submit" value="Register" class="btn btn-primary" />
                         </div>
